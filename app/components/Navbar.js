@@ -26,7 +26,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className='fixed top-0 left-0 right-0 flex items-center p-4 bg-white w-full justify-between'>
+      <nav className='fixed z-50 top-0 left-0 right-0 flex items-center p-4 bg-white w-full justify-between'>
         <div className='flex gap-5 items-center'>
           <Image src='/logo.png' alt='logo' width={50} height={50} />
           <ul className='md:flex gap-4 items-center hidden md:block'>
