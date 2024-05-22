@@ -1,5 +1,9 @@
 import NavLayout from "./components/NavLayout";
 import Link from "next/link";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
+
+
 
 export default function Home() {
   return (
@@ -47,9 +51,64 @@ export default function Home() {
               <h1 className="font-bold text-center text-[23px] -mt-5">Video Editing</h1>
               <p className="text-center">Want your videos be edited in a professional way? Worry no more!!! Reach out to us and get your job done quickly.</p>
             </div>
-          </div> 
+          </div>
         </div>
-        <Link href='/' className="text-white hover:bg-[#FF9900] bg-[#2dabb1] py-3 px-7 cursor-pointer">Learn More</Link>
+        <Link href='/' className="text-white rounded-3xl hover:bg-[#FF9900] bg-[#2dabb1] py-3 px-7 cursor-pointer">Learn More</Link>
+      </section>
+      <section className="mt-7 mx-4">
+        <h1 className="text-center text-[24px] font-semibold">Unleash your full power with design fiti</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="flex flex-col items-center">
+            <span className="text-[80px] text-[#2dabb1] font-bold">20+</span>
+            Projects
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-[80px] text-[#2dabb1] font-bold">10+</span>
+            Clients
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-[80px] text-[#2dabb1] font-bold">15+</span>
+            Clients
+          </div>
+        </div>
+        <div className="w-full justify-center items-center flex flex-col md:flex-row gap-3 mt-9">
+          <div className="md:w-1/4 w-full">
+            <h1 className="text-[26px] font-bold md:text-start text-center">What our clients think about Design fiti</h1>
+            <p className="md:text-start text-center">These are just some of the opinion of customers who have received our services.</p>
+            <div className="flex w-full gap-2 items-center">
+              <button className="p-2 border rounded">
+                <IoIosArrowForward />
+              </button>
+              <button className="p-2 border rounded">
+                <IoIosArrowBack />
+              </button>
+            </div>
+          </div>
+          <div className="md:w-3/4 w-full">
+            <div className="bg-gray-400 w-full h-[300px]">
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 className="text-center text-[26px] font-bold">Frequently asked questions</h1>
+        <p className="text-center">Have questions? We are here to help you.</p>
+        <button className="flex mt-3 mx-auto bg-[#2dabb1] items-center text-white gap-2 px-4 py-3">Contact Us <FaArrowRight /></button>
+        <div className="mt-9">
+          <div className="w-full p-3 flex flex-col md:flex-row gap-3">
+            <div className="border p-3 w-full md:w-1/2 rounded">
+              <div className="flex justify-between w-full"><h1>What do Design Fiti do?</h1>
+                <button className="rounded-full items-center font-bold justify-center flex text-white bg-gray-400 h-8 w-8">+</button>
+              </div>
+            </div>
+            <div className="border p-3 w-full md:w-1/2 rounded">
+              <div className="flex justify-between w-full"><h1>What programming Languages do we use?</h1>
+                <button className="rounded-full items-center font-bold justify-center flex text-white bg-gray-400 h-8 w-8">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </NavLayout>
