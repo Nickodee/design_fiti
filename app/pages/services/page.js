@@ -37,6 +37,9 @@ function Services() {
               We make Every Project Feel Personal <br /> because{" "}
               <span className="text-[#FF9900]">Our Clients Matter.</span>
             </p2>
+            <p2 className="text-bold mt-5"> 
+                Our services
+            </p2>
           </div>
         </div>
       </section>
