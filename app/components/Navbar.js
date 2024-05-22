@@ -4,26 +4,37 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaBarsStaggered } from 'react-icons/fa6';
 import { FaTimes } from "react-icons/fa";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleServicesMouseEnter = () => {
+    setServicesOpen(true);
+  };
+
+  const handleServicesMouseLeave = () => {
+    setServicesOpen(false);
+  };
+
   return (
     <>
-      <nav className='relative flex items-center p-4 bg-white w-full justify-between'>
+      <nav className='fixed top-0 left-0 right-0 flex items-center p-4 bg-white w-full justify-between'>
         <div className='flex gap-5 items-center'>
           <Image src='/logo.png' alt='logo' width={50} height={50} />
           <ul className='md:flex gap-4 items-center hidden md:block'>
-            <li className='hover:text-[#1791C8]'><Link href='#'>Home</Link></li>
-            <li className='hover:text-[#1791C8]'><Link href='#'>About</Link></li>
-            <li className='hover:text-[#1791C8]'><Link href='#'>Services</Link></li>
-            <li className='hover:text-[#1791C8]'><Link href='#'>Projects</Link></li>
-            <li className='hover:text-[#1791C8]'><Link href='#'>Contacts</Link></li>
+            <li className='hover:text-[#1791C8]'><Link href='/'>Home</Link></li>
+            <li className='hover:text-[#1791C8]'><Link href='/pages/about'>About</Link></li>
+            <li className='hover:text-[#1791C8] items-center flex'><Link href='/pages/services'>Services</Link> <RiArrowDropDownLine size={24} /></li>
+            <li className='hover:text-[#1791C8]'><Link href='/pages/projects'>Projects</Link></li>
+            <li className='hover:text-[#1791C8]'><Link href='/pages/contacts'>Contacts</Link></li>
           </ul>
         </div>
         <button className='rounded hidden md:block text-white p-2 hover:bg-[#0D7AB6] bg-[#1791C8]'>Get Started</button>
