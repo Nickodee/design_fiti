@@ -29,33 +29,33 @@ function Footer() {
                     <div className='flex flex-col text-white'>
                         <div className='flex gap-2 items-center'>
                             <FaFacebookSquare className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>design fiti</Link>
                         </div>
                         <div className='flex gap-2 items-center'>
                             <FaTiktok className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>design fiti</Link>
                         </div>
                         <div className='flex gap-2 items-center'>
                             <FaInstagram className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>design_fiti</Link>
                         </div>
                         <div className='flex gap-2 items-center'>
                             <FaTwitter className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>design_fiti</Link>
                         </div>
                     </div>
                     <div className='flex flex-col text-white'>
                         <div className='flex gap-2 items-center'>
                             <FaYoutube className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>design_fiti</Link>
                         </div>
                         <div className='flex gap-2 items-center'>
                             <IoMdCall className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>0748776293</Link>
                         </div>
                         <div className='flex gap-2 items-center'>
                             <MdMailOutline className='text-white' />
-                            <Link href='/pages/services' className='hover:text-[#2dabb1]'>design fity</Link>
+                            <Link href='/pages/services' className='hover:text-[#1791C8]'>designfiti@gmail.com</Link>
                         </div>
                     </div>
                 </div>

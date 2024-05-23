@@ -1,11 +1,20 @@
+'use client'
 import NavLayout from "./components/NavLayout";
 import Link from "next/link";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
+import { useState } from "react";
 
 
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [openId, setOpenId] = useState(null);
+
+
+  const handleToggle = (id) => {
+    setOpenId(openId ===id? null : id);
+  }
   return (
     <NavLayout>
       <section className="w-full">
@@ -18,13 +27,13 @@ export default function Home() {
             <p className="text-[21px] md:text-left text-center mt-5">Marketing and other companies are
               using our services to increase their products
               sale</p>
-            <button className="p-2 flex mx-auto md:mx-0 hover:bg-[#FF9900] text-white bg-[#2dabb1] mt-5 font-semibold text-[24px] rounded-full">Book a Call Now</button>
+            <button className="p-2 flex mx-auto md:mx-0 hover:bg-[#FF9900] text-white bg-[#1791C8] mt-5 font-semibold text-[24px] rounded-full">Book a Call Now</button>
           </div>
           <img src='/woman.jpg' alt='woman' className="w-full md:w-1/2 md:h-auto object-cover" />
         </div>
       </section>
       <section className="mx-5">
-        <h1 className="text-center text-[21px]">Services</h1>
+        <h1 className="text-center text-[21px] text-[#1791C8] underline">Services</h1>
         <h1 className="font-semibold text-center text-[30px]">Get to Learn more about our Services</h1>
         <p className="text-center">Connect with us and get lucrative services from our compitent team. We value <br /> customer satisfactions. At Design Fiti your work quality is quaranteed</p>
         <div className="w-full mb-7">
@@ -53,21 +62,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Link href='/' className="text-white rounded-3xl hover:bg-[#FF9900] bg-[#2dabb1] py-3 px-7 cursor-pointer">Learn More</Link>
+        <Link href='/' className="text-white rounded-3xl hover:bg-[#FF9900] bg-[#1791C8] py-3 px-7 cursor-pointer">Learn More</Link>
       </section>
       <section className="mt-7 mx-4">
-        <h1 className="text-center text-[24px] font-semibold">Unleash your full power with design fiti</h1>
+        <h1 className="text-center text-[24px] font-semibold text-[#1791C8] underline">Unleash your full power with design fiti</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="flex flex-col items-center">
-            <span className="text-[80px] text-[#2dabb1] font-bold">20+</span>
+            <span className="text-[80px] text-[#1791C8] font-bold">20+</span>
             Projects
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-[80px] text-[#2dabb1] font-bold">10+</span>
+            <span className="text-[80px] text-[#1791C8] font-bold">10+</span>
             Clients
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-[80px] text-[#2dabb1] font-bold">15+</span>
+            <span className="text-[80px] text-[#1791C8] font-bold">15+</span>
             Clients
           </div>
         </div>
@@ -91,21 +100,42 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <h1 className="text-center text-[26px] font-bold">Frequently asked questions</h1>
+      <section className="mt-7">
+        <h1 className="text-center text-[26px] font-bold text-[#1791C8] underline">Frequently asked questions</h1>
         <p className="text-center">Have questions? We are here to help you.</p>
-        <button className="flex mt-3 mx-auto bg-[#2dabb1] items-center text-white gap-2 px-4 py-3">Contact Us <FaArrowRight /></button>
+        <button className="flex mt-3 mx-auto bg-[#1791C8] items-center text-white gap-2 px-4 py-3">Contact Us <FaArrowRight /></button>
         <div className="mt-9">
           <div className="w-full p-3 flex flex-col md:flex-row gap-3">
             <div className="border p-3 w-full md:w-1/2 rounded">
-              <div className="flex justify-between w-full"><h1>What do Design Fiti do?</h1>
-                <button className="rounded-full items-center font-bold justify-center flex text-white bg-gray-400 h-8 w-8">+</button>
+              <div className="flex justify-between w-full"><h1 className="font-bold">What do Design Fiti do?</h1>
+                <button
+                  onClick={() => handleToggle(1)}
+                  className="rounded-full items-center font-bold justify-center flex text-white bg-gray-400 h-8 w-8"
+                >
+                  {openId === 1 ? '-' : '+'}
+                </button>
               </div>
+
+              {openId === 1 && (
+                <div className="w-full mt-2">
+                  Design Fiti is a company that deals with software development, animation, video editing
+                </div>
+              )}
             </div>
             <div className="border p-3 w-full md:w-1/2 rounded">
-              <div className="flex justify-between w-full"><h1>What programming Languages do we use?</h1>
-                <button className="rounded-full items-center font-bold justify-center flex text-white bg-gray-400 h-8 w-8">+</button>
+              <div className="flex justify-between w-full"><h1 className="font-bold">What programming Languages do we use?</h1>
+                <button
+                  onClick={() => handleToggle(2)}
+                  className="rounded-full items-center font-bold justify-center flex text-white bg-gray-400 h-8 w-8"
+                >
+                  {openId === 2 ? '-' : '+'}
+                </button>
               </div>
+              {openId === 2 && (
+                <div className="w-full mt-2">
+                Design Fiti is a company that deals with software development, animation, video editing
+                </div>
+              )}
             </div>
           </div>
         </div>
