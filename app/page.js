@@ -94,8 +94,13 @@ export default function Home() {
             </div>
           </div>
           <div className="md:w-3/4 w-full">
-            <div className="bg-gray-400 w-full h-[300px]">
-
+            <div className="bg-gray-400 w-full p-4">
+              <div className="p-2 flex  gap-1 flex-col  bg-white w-[200px] border relative rounded">
+                <div className=" w-[50px] h-[50px] bg-[#1791C8] relative -top-8"></div>
+                <h1 className="font-bold relative -top-5">Calisto Makula</h1>
+                <h2 className="text-[#1791C8] relative -top-5">CEO, JEM Solutions</h2>
+                <p className="relative -top-5">You did an amazing jo, I love your designs, Your designs are worthy more that 1000 words</p>
+              </div>
             </div>
           </div>
         </div>
