@@ -20,7 +20,7 @@ function Contacts() {
         </div>
         <div className="flex mt-4 bg-slate-100">
           <div className="flex flex-col items-start text-left w-1/2 p-5">
-            <h1 className="text-3xl font-bold">Let's Talk!</h1>
+          <h1 className="text-3xl font-bold">Let&apos;s Talk!</h1>
             <p className="mb-4">
               Get in touch with us using the enquiry form or our contacts below.
             </p>
