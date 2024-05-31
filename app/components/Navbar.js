@@ -39,7 +39,7 @@ function Navbar() {
         <div className='flex gap-10 items-center'>
           <div className='flex items-center gap-2'>
             <Image src='/logo.png' alt='logo' width={50} height={50} />
-            <Link href='/' className='text-[#1791C8] font-bold'>Design Fiti</Link>
+            <Link href='/' className='text-[#1791C8] font-bold'>Design Fity</Link>
           </div>
           <ul className='md:flex gap-4 items-center hidden md:block'>
             <li className='hover:text-[#1791C8]'><Link href='/'>Home</Link></li>
